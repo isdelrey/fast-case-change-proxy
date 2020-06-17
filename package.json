@@ -1,6 +1,6 @@
 {
     "name": "fast-case-change-proxy",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A package to access fields with a different case style without an extra build cost",
     "main": "build/index.js",
     "repository": "https://github.com/ivosequeros/fast-case-change.git",
