@@ -31,3 +31,25 @@ describe("Change case", () => {
         expect(object.details.languageSpoken).to.be.eq("en")
     })
 })
+
+describe("Serialise object into JSON string", () => {
+    it("should proxy a camelcase-key object onto an underscore-key object", async () => {
+        const object = Case.fromCamelToUnderscore({
+            myName: "Ivo",
+            mySurname: "Sequeros del Rey",
+            details: {
+                languageSpoken: "en"
+            }
+        })
+
+        const serialised = JSON.stringify(object)
+        const deserialised = JSON.parse(serialised)
+        expect(deserialised).to.be.deep.eq({
+            my_name: "Ivo",
+            my_surname: "Sequeros del Rey",
+            details: {
+                language_spoken: "en"
+            }
+        })
+    })
+})
