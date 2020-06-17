@@ -1,0 +1,22 @@
+{
+    "name": "fast-case-change",
+    "version": "1.0.0",
+    "description": "A package to access fields with a different case style without an extra build cost",
+    "main": "build/index.js",
+    "repository": "https://github.com/ivosequeros/fast-case-change.git",
+    "author": "Ivo Sequeros del Rey",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "test": "NODE_ENV=test mocha -r ts-node/register tests/**/*.ts"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.0.1",
+        "@types/chai": "4.2.11",
+        "@types/node": "4.2.11",
+        "@types/mocha": "7.0.2",
+        "ts-node": "8.10.2",
+        "typescript": "3.9.3"
+    }
+}
